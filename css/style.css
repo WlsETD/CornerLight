@@ -16,9 +16,9 @@
   --light: #f4f0ea;         /* 深色底上的文字 */
 
   /* 字體 */
-  /* 全站統一:思源黑體 Noto Sans TC */
+  /* 思源黑體(內文)+ 思源宋體(標題) */
   --sans: "Noto Sans TC", "Source Han Sans TC", "思源黑體", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
-  --serif: var(--sans);
+  --serif: "Noto Serif TC", "Source Han Serif TC", "思源宋體", "Songti TC", "PMingLiU", serif;
   --display: var(--sans);
 
   /* 版面 */
@@ -209,7 +209,7 @@ body.menu-open .site-header { color: var(--light); background: transparent; bord
   mix-blend-mode: screen; filter: blur(6px);
 }
 .hero-copy { position: relative; z-index: 2; padding-bottom: clamp(72px, 12vh, 140px); width: min(100% - 2 * var(--gut), var(--max)); margin-inline: auto; }
-.hero-title { font-weight: 400; font-size: clamp(2.2rem, 5.4vw, 5rem); line-height: 1.08; letter-spacing: .06em; margin-bottom: 1.6rem; }
+.hero-title { font-weight: 500; font-size: clamp(2.2rem, 5.4vw, 5rem); line-height: 1.08; letter-spacing: .06em; margin-bottom: 1.6rem; }
 .line { display: block; overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
 .line > span { display: block; transform: translateY(112%); transition: transform 1.2s var(--ease); transition-delay: var(--d, 0s); }
 body.ready .line > span { transform: none; }
