@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="聯絡隅光設計:地址、電話、營業時間與線上聯絡表單。(虛構品牌,展示用)">
+  <meta name="theme-color" content="#f4f0ea">
+  <title>聯絡我們 | 隅光設計 Corner Light</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.reveal,.fade-in{opacity:1!important;transform:none!important}.line>span{transform:none!important}</style></noscript>
+</head>
+<body data-page="contact" data-title="聯絡我們">
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title" style="height:58vh">
+    <div class="par par--shade"><div class="par-img" data-img="20-contact-hero.jpg" data-speed="1" data-alt="灰泥外牆的工作室入口,木門微開,暖光從門縫流出"></div></div>
+    <div class="hero-copy" data-speed="-0.15">
+      <p class="eyebrow eyebrow--light fade-in">Contact</p>
+      <h1 id="page-title"><span class="line"><span>聯絡我們</span></span></h1>
+      <p class="hero-sub fade-in">推開這扇門,或留一則訊息給我們。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Studio</p>
+        <h2 class="h-section">工作室資訊</h2>
+        <hr class="rule">
+        <dl class="info" style="margin:0">
+          <dt>Address</dt><dd data-site="address"></dd>
+          <dt>Phone</dt><dd><a data-site-href="phone" data-site="phone" href="#"></a></dd>
+          <dt>Email</dt><dd><a data-site-href="email" data-site="email" href="#"></a></dd>
+          <dt>Hours</dt><dd data-site="hours"></dd>
+        </dl>
+        <!-- 地圖示意(純 SVG,非實際地圖) -->
+        <figure class="map" style="margin-top:2.4rem">
+          <svg viewBox="0 0 600 340" role="img" aria-labelledby="map-t map-d">
+            <title id="map-t">工作室位置示意圖</title>
+            <desc id="map-d">以簡化街道線條標示工作室位於兩條道路交會的轉角處,僅為示意,非實際地圖。</desc>
+            <rect width="600" height="340" fill="#ebe5db"/>
+            <g stroke="#d6cdbd" stroke-width="1"><path d="M0 60H600M0 150H600M0 250H600M80 0V340M210 0V340M390 0V340M510 0V340"/></g>
+            <g fill="#dfd6c6"><rect x="92" y="72" width="106" height="66"/><rect x="222" y="72" width="156" height="66"/><rect x="402" y="72" width="96" height="66"/><rect x="92" y="162" width="106" height="76"/><rect x="402" y="162" width="96" height="76"/><rect x="92" y="262" width="106" height="66"/><rect x="222" y="262" width="156" height="66"/></g>
+            <g fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"><path d="M0 200H600"/><path d="M300 0V340"/></g>
+            <path d="M0 200H600M300 0V340" fill="none" stroke="#cfc5b3" stroke-width="1" stroke-dasharray="6 8"/>
+            <path d="M222 162h156v76H222z" fill="#cfe0c8" opacity=".75"/>
+            <text x="300" y="332" text-anchor="middle" font-size="11" fill="#6a6258" font-family="sans-serif" letter-spacing="3">SHOWCASE RD.</text>
+            <g transform="translate(318 168)"><circle r="26" fill="#b5573a" opacity=".18"/><path d="M0 -16a11 11 0 0 1 11 11c0 8-11 21-11 21s-11-13-11-21a11 11 0 0 1 11-11z" fill="#b5573a"/><circle cy="-5" r="4.2" fill="#f4f0ea"/></g>
+          </svg>
+          <figcaption>地圖為示意圖,非實際位置。</figcaption>
+        </figure>
+      </div>
+
+      <div class="reveal" style="--d:.1s">
+        <p class="eyebrow">Message</p>
+        <h2 class="h-section">留言給我們</h2>
+        <hr class="rule">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-name">姓名</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" maxlength="20">
+              <p class="err" data-err="name"></p>
+            </div>
+            <div class="field">
+              <label for="c-phone">電話(選填)</label>
+              <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20">
+              <p class="err" data-err="phone"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" maxlength="80">
+            <p class="err" data-err="email"></p>
+          </div>
+          <div class="field">
+            <label for="c-msg">訊息</label>
+            <textarea id="c-msg" name="message" maxlength="500" placeholder="簡單說說你的空間與想法"></textarea>
+            <p class="err" data-err="message"></p>
+          </div>
+          <button class="btn btn--solid" type="submit">送出訊息 <span class="arr" aria-hidden="true">→</span></button>
+          <p class="form-msg" role="status" aria-live="polite" hidden></p>
+          <p class="demo-note">展示用途:表單內容只存在你的瀏覽器,不會寄出。想預約時段請到 <a href="services.html#booking" style="text-decoration:underline">服務項目</a>。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

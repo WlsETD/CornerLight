@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="隅光設計會員登入與註冊(展示用,資料只存在瀏覽器)。">
+  <meta name="theme-color" content="#f4f0ea">
+  <title>會員登入 | 隅光設計 Corner Light</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.reveal,.fade-in{opacity:1!important;transform:none!important}.line>span{transform:none!important}</style></noscript>
+</head>
+<body data-page="login" data-title="會員登入" data-solid="1">
+<div id="site-header"></div>
+
+<main id="main" class="auth">
+  <div class="auth-side">
+    <div class="par par--shade"><div class="par-img" data-img="21-login-bg.jpg" data-speed="1" data-alt="晨光下的窗邊,紗簾與插著乾枝的陶瓶"></div></div>
+    <p class="quote" aria-hidden="true">每天回到家,<br>都有一道光在等你。</p>
+  </div>
+
+  <div class="auth-main">
+    <div class="auth-card" id="auth-root">
+      <p class="eyebrow">Member</p>
+      <h1 class="h-section" style="font-size:clamp(1.7rem,3vw,2.3rem)">會員登入</h1>
+
+      <!-- 已登入時顯示 -->
+      <div class="welcome" id="welcome" hidden>
+        <p>您已登入為「<strong data-who></strong>」。</p>
+        <div class="btns">
+          <a class="btn btn--solid" data-go href="index.html">繼續瀏覽 <span class="arr" aria-hidden="true">→</span></a>
+          <button class="btn" type="button" data-logout>登出</button>
+        </div>
+      </div>
+
+      <div id="tabs-wrap">
+        <div class="tabs" role="tablist" aria-label="登入或註冊">
+          <button class="tab" type="button" role="tab" id="tab-login" data-tab="login" aria-selected="true" aria-controls="panel-login">登入</button>
+          <button class="tab" type="button" role="tab" id="tab-register" data-tab="register" aria-selected="false" tabindex="-1" aria-controls="panel-register">註冊</button>
+        </div>
+
+        <div id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="l-email">Email</label>
+              <input id="l-email" name="email" type="email" autocomplete="email" maxlength="80">
+              <p class="err" data-err="email"></p>
+            </div>
+            <div class="field">
+              <label for="l-pw">密碼</label>
+              <input id="l-pw" name="password" type="password" autocomplete="current-password" maxlength="64">
+              <p class="err" data-err="password"></p>
+            </div>
+            <button class="btn btn--solid" type="submit">登入 <span class="arr" aria-hidden="true">→</span></button>
+            <p class="form-msg" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+
+        <div id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+          <form id="register-form" novalidate>
+            <div class="field">
+              <label for="r-name">姓名</label>
+              <input id="r-name" name="name" type="text" autocomplete="name" maxlength="20">
+              <p class="err" data-err="name"></p>
+            </div>
+            <div class="field">
+              <label for="r-email">Email</label>
+              <input id="r-email" name="email" type="email" autocomplete="email" maxlength="80">
+              <p class="err" data-err="email"></p>
+            </div>
+            <div class="field">
+              <label for="r-pw">密碼(至少 6 碼)</label>
+              <input id="r-pw" name="password" type="password" autocomplete="new-password" maxlength="64">
+              <p class="err" data-err="password"></p>
+            </div>
+            <div class="field">
+              <label for="r-pw2">再輸入一次密碼</label>
+              <input id="r-pw2" name="confirm" type="password" autocomplete="new-password" maxlength="64">
+              <p class="err" data-err="confirm"></p>
+            </div>
+            <button class="btn btn--solid" type="submit">建立帳號 <span class="arr" aria-hidden="true">→</span></button>
+            <p class="form-msg" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </div>
+
+      <p class="demo-note">展示用途:帳號資料只存在這個瀏覽器(localStorage),不會傳到伺服器;請勿輸入真實使用的密碼。<span id="storage-note" hidden> 目前瀏覽器封鎖了儲存功能,登入狀態無法跨頁保留。</span></p>
+      <p style="margin-top:1.4rem"><a href="index.html" style="border-bottom:1px solid var(--line)">← 回到首頁</a></p>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

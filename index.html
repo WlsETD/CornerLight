@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="隅光設計 Corner Light:以光為題的室內設計工作室。安靜、克制、留白、溫暖。(虛構品牌,作品集展示用)">
+  <meta name="theme-color" content="#f4f0ea">
+  <title>首頁 | 隅光設計 Corner Light</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.reveal,.fade-in{opacity:1!important;transform:none!important}.line>span{transform:none!important}</style></noscript>
+</head>
+<body data-page="home" data-title="首頁">
+<div id="site-header"></div>
+
+<main id="main">
+  <!-- Hero:背景慢速視差、大字反向視差、滑鼠景深 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="par par--shade">
+      <div class="depth" data-depth="14" data-scale="1.06">
+        <div class="par-img" data-img="01-home-hero.jpg" data-speed="1" data-alt="夕陽斜照進寬敞客廳,紗簾後的光影落在灰泥牆面與橡木地板上"></div>
+      </div>
+    </div>
+    <div class="hero-orb-wrap" data-speed="0.45" aria-hidden="true">
+      <div class="hero-orb" data-depth="-30"></div>
+    </div>
+    <div class="hero-copy" data-speed="-0.22" data-fade>
+      <div class="depth-copy" data-depth="-9">
+        <p class="eyebrow eyebrow--light fade-in">Interior Studio · Taipei</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line" style="--d:.15s"><span>讓每個角落,</span></span>
+          <span class="line" style="--d:.32s"><span>都有光。</span></span>
+        </h1>
+        <p class="hero-sub fade-in">隅光設計是一間安靜的室內設計工作室。我們從日光的角度開始,為住宅與商空留下剛剛好的餘白。</p>
+        <div class="btns fade-in">
+          <a class="btn btn--solid" href="services.html#booking">預約諮詢 <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn--light" href="#works">看精選作品 <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- 跑馬燈(純裝飾) -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Quiet Space</span><em>✦</em><span>留白</span><em>✦</em><span>Warm Light</span><em>✦</em><span>克制</span><em>✦</em><span>Slow Living</span><em>✦</em><span>溫暖</span><em>✦</em>
+      <span>Quiet Space</span><em>✦</em><span>留白</span><em>✦</em><span>Warm Light</span><em>✦</em><span>克制</span><em>✦</em><span>Slow Living</span><em>✦</em><span>溫暖</span><em>✦</em>
+    </div>
+  </div>
+
+  <!-- 品牌簡介 + 數字 -->
+  <section class="section" aria-labelledby="intro-title">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow">About the studio</p>
+          <h2 class="h-section" id="intro-title">以光為題,<br>為生活設計。</h2>
+          <hr class="rule">
+          <p class="lead">我們相信好的空間不需要喧嘩。從日光的角度、材質的溫度,到動線的節奏,每一個細節都只為讓人安靜地待著。</p>
+          <p class="lead">不追逐流行,也不堆疊裝飾。把多餘的拿掉,剩下的,就是家原本的樣子。</p>
+          <p style="margin-top:2rem"><a class="btn" href="about.html">認識我們 <span class="arr" aria-hidden="true">→</span></a></p>
+        </div>
+        <div class="reveal" style="--d:.12s">
+          <div class="stats">
+            <div class="stat"><b data-count="12"><span>0</span><i>年</i></b><span>專注室內設計</span></div>
+            <div class="stat"><b data-count="180"><span>0</span><i>+</i></b><span>完成的空間</span></div>
+            <div class="stat"><b data-count="36"><span>0</span></b><span>長期合作工匠</span></div>
+            <div class="stat"><b data-count="9"><span>0</span><i>成</i></b><span>客戶回訪或轉介</span></div>
+          </div>
+          <p class="fine">※ 數字為作品集展示用的示意資料,非真實營運數據。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 全幅視差引言帶 -->
+  <section class="band" aria-label="品牌引言">
+    <div class="par par--shade"><div class="par-img" data-img="02-home-band-a.jpg" data-speed="0.8"></div></div>
+    <div class="band-copy reveal">
+      <p class="eyebrow eyebrow--light">Our belief</p>
+      <h2>好的空間不需要喧嘩,<br>只需要一道剛剛好的光。</h2>
+    </div>
+  </section>
+
+  <!-- 精選作品:滾動驅動的全螢幕視差。每張圖 滑入 → cubic-out 放大到全螢幕 → 出現標題與介紹 → 換下一張 -->
+  <section class="reel" id="works" aria-labelledby="works-title">
+    <div class="reel-stage">
+      <div class="reel-intro">
+        <div class="wrap center">
+          <p class="eyebrow">Selected works</p>
+          <h2 class="h-section" id="works-title">精選作品</h2>
+          <p class="lead">往下捲動,走進四個被光安靜照亮的空間。</p>
+        </div>
+      </div>
+      <article class="reel-item" data-w="0.44" data-h="0.52" data-x="-0.08" aria-labelledby="work-1">
+        <div class="reel-img" data-img="03-work-01.jpg" data-alt="橡木櫃體、亞麻沙發與拱形門洞的公寓客餐廳"></div>
+        <div class="reel-shade" aria-hidden="true"></div>
+        <div class="reel-grad" aria-hidden="true"></div>
+        <div class="reel-text wrap">
+          <p class="reel-no" data-rt>01 / 04</p>
+          <h3 id="work-1" data-rt>寧靜公寓</h3>
+          <p class="reel-meta" data-rt>住宅・台北</p>
+          <p class="reel-desc" data-rt>拆掉一道隔間牆,讓早晨的光從陽台一路走到餐桌。橡木、亞麻與一道拱門,讓老公寓重新安靜下來。</p>
+        </div>
+      </article>
+      <article class="reel-item" data-w="0.28" data-h="0.62" data-x="0.14" aria-labelledby="work-2">
+        <div class="reel-img" data-img="04-work-02.jpg" data-alt="胡桃木吧台與水磨石地板的咖啡店"></div>
+        <div class="reel-shade" aria-hidden="true"></div>
+        <div class="reel-grad" aria-hidden="true"></div>
+        <div class="reel-text wrap">
+          <p class="reel-no" data-rt>02 / 04</p>
+          <h3 id="work-2" data-rt>木語咖啡</h3>
+          <p class="reel-meta" data-rt>商業・台中</p>
+          <p class="reel-desc" data-rt>胡桃木吧台是整間店的重心。水磨石地坪與低垂的暖光,讓人願意多坐一杯咖啡的時間。</p>
+        </div>
+      </article>
+      <article class="reel-item" data-w="0.46" data-h="0.52" data-x="0.06" aria-labelledby="work-3">
+        <div class="reel-img" data-img="06-work-04.jpg" data-alt="白色灰泥牆與面海木窗的民宿客房"></div>
+        <div class="reel-shade" aria-hidden="true"></div>
+        <div class="reel-grad" aria-hidden="true"></div>
+        <div class="reel-text wrap">
+          <p class="reel-no" data-rt>03 / 04</p>
+          <h3 id="work-3" data-rt>海邊民宿</h3>
+          <p class="reel-meta" data-rt>旅宿・花蓮</p>
+          <p class="reel-desc" data-rt>白色灰泥牆只做一件事:把海的光收進房間。低床、原木窗框,醒來的第一眼就是海。</p>
+        </div>
+      </article>
+      <article class="reel-item" data-w="0.30" data-h="0.62" data-x="-0.12" aria-labelledby="work-4">
+        <div class="reel-img" data-img="08-work-06.jpg" data-alt="黃昏光線洗過牆面的亞麻臥室"></div>
+        <div class="reel-shade" aria-hidden="true"></div>
+        <div class="reel-grad" aria-hidden="true"></div>
+        <div class="reel-text wrap">
+          <p class="reel-no" data-rt>04 / 04</p>
+          <h3 id="work-4" data-rt>暮光臥室</h3>
+          <p class="reel-meta" data-rt>住宅・台南</p>
+          <p class="reel-desc" data-rt>洗牆光沿著手作肌理的牆面慢慢暗下來。黃昏之後,房間只留下剛好能入睡的亮度。</p>
+        </div>
+      </article>
+      <div class="reel-count" aria-hidden="true"><span data-reel-cur>01</span><span class="reel-bar"><i></i></span><span>04</span></div>
+    </div>
+  </section>
+
+  <!-- 結尾 CTA 視差帶 -->
+  <section class="band" aria-labelledby="cta-title">
+    <div class="par par--shade"><div class="par-img" data-img="09-home-band-b.jpg" data-speed="0.9"></div></div>
+    <div class="band-copy reveal">
+      <p class="eyebrow eyebrow--light">Let's talk</p>
+      <h2 id="cta-title">準備好讓你的空間,<br>重新被光照亮了嗎?</h2>
+      <a class="btn btn--solid" href="services.html#booking">預約第一次諮詢 <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
