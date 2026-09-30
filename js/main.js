@@ -345,7 +345,7 @@
   /* ---------- 6b. 精選作品 Reel:滾動驅動的全螢幕視差 ----------
      每張圖分到一段捲動距離 u(0→1):
        0.00–0.35 從畫面下方滑入(圖片本身落後,產生景深)
-       0.35–0.75 以 cubic-out 曲線從卡片放大到全螢幕(clip-path 展開 + 圖片反向縮放)
+       0.35–0.75 以 cubic-out 曲線從圓形放大到全螢幕(clip-path circle 展開 + 圖片反向縮放)
        0.62–0.90 標題、分類、介紹逐行浮現
        0.75–1.00 停留;下一張進來時,這張往後退並變暗 */
   var reel = null;
@@ -401,13 +401,15 @@
       var push = easeOut(seg(nxt, 0, .75));            /* 下一張進場時的後退量 */
       var textOut = 1 - seg(nxt, 0, .18);
 
-      /* 卡片(縮小狀態)在舞台中的位置 */
-      var cw = (mobile ? .82 : it.w) * W, ch = (mobile ? .5 : it.h) * H, cx = mobile ? 0 : it.x * W;
-      var L = (W - cw) / 2 + cx, Rt = (W - cw) / 2 - cx, T = (H - ch) / 2, k = 1 - grow;
-      var ty = (1 - enter) * (H - T + 60);            /* 從畫面外往上滑入 */
+      /* 圓形(縮小狀態)的大小與圓心;放大時半徑以 cubic-out 長到能蓋住整個螢幕 */
+      var d = mobile ? Math.min(W * .74, H * .46) : Math.min(it.h * H * .92, W * .46);
+      var r0 = d / 2, cx = W / 2 + (mobile ? 0 : it.x * W), cy = H / 2;
+      var rFull = Math.hypot(Math.max(cx, W - cx), Math.max(cy, H - cy)) + 2;
+      var rad = r0 + (rFull - r0) * grow;
+      var ty = (1 - enter) * (H - (cy - r0) + 60);    /* 從畫面外往上滑入 */
       var sc = 1 - push * .1;
       it.el.style.transform = 'translate3d(0,' + ty.toFixed(1) + 'px,0) scale(' + sc.toFixed(4) + ')';
-      it.el.style.clipPath = 'inset(' + (T * k).toFixed(1) + 'px ' + (Rt * k).toFixed(1) + 'px ' + (T * k).toFixed(1) + 'px ' + (L * k).toFixed(1) + 'px round ' + (6 * k).toFixed(1) + 'px)';
+      it.el.style.clipPath = 'circle(' + rad.toFixed(1) + 'px at ' + cx.toFixed(1) + 'px ' + cy.toFixed(1) + 'px)';
 
       /* 圖片:滑入時落後(重度視差)、放大時反向縮小、停留時緩慢漂移 */
       var iy = -ty * .28 - hold * H * .035 + push * H * .06;
